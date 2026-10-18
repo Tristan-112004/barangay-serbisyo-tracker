@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barangay Serbisyo Tracker – Demo Portal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <h1>Barangay Serbisyo Tracker</h1>
+      <p class="tagline">A demo portal for Barangay Mabini residents. All data is fictional.</p>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <!-- SERVICE DIRECTORY -->
+    <section aria-labelledby="services-heading">
+      <h2 id="services-heading">Barangay Services</h2>
+      <p>Below are common services and their requirements. This is educational demo content only.</p>
+      <div id="service-list" class="service-grid">
+        <!-- injected by JavaScript -->
+      </div>
+    </section>
+
+    <!-- DEMO REQUEST FORM -->
+    <section aria-labelledby="request-heading">
+      <h2 id="request-heading">Submit a Demo Service Request</h2>
+      <p>This form does not connect to a real barangay system. It generates a reference number for demonstration.</p>
+
+      <form id="request-form" novalidate>
+        <div class="form-group">
+          <label for="resident-name">Full name <span class="required">*</span></label>
+          <input type="text" id="resident-name" name="residentName" required autocomplete="name">
+        </div>
+
+        <div class="form-group">
+          <label for="service-select">Service <span class="required">*</span></label>
+          <select id="service-select" name="service" required>
+            <option value="">Select a service</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="purpose">Purpose <span class="required">*</span></label>
+          <textarea id="purpose" name="purpose" rows="3" required></textarea>
+        </div>
+
+        <button type="submit">Generate Reference Number</button>
+      </form>
+
+      <div id="request-result" class="result-box" aria-live="polite"></div>
+    </section>
+
+    <!-- STATUS CHECKER -->
+    <section aria-labelledby="status-heading">
+      <h2 id="status-heading">Check Demo Request Status</h2>
+      <p>Enter a reference number generated above (e.g., BRGY-2025-0001).</p>
+
+      <form id="status-form" novalidate>
+        <div class="form-group">
+          <label for="reference-input">Reference number</label>
+          <input type="text" id="reference-input" name="reference" placeholder="BRGY-2025-0001" required>
+        </div>
+        <button type="submit">Check Status</button>
+      </form>
+
+      <div id="status-result" class="result-box" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Barangay Serbisyo Tracker – Laboratory Activity #4. For educational purposes only. No real transactions are processed.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
